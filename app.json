@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "당근마켓",
-    "slug": "당근마켓",
+    "slug": "carrot-market",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
