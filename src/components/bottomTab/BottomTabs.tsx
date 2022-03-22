@@ -30,14 +30,21 @@ const BottomTabs = () => {
       <Tab.Navigator
         screenOptions={{
           headerTitle: "",
+          headerStyle: {
+            borderBottomWidth: 0.5,
+            borderBottomColor: "#B2B2B2",
+          },
           tabBarActiveTintColor: "#212124",
           tabBarInactiveTintColor: "#212124",
           tabBarStyle: {
-            borderTopWidth: 1,
-            height: 84,
+            borderTopWidth: 0.5,
+            borderTopColor: "#B2B2B2",
+            // height: 84,
+            // paddingBottom: 10,
           },
           tabBarItemStyle: {
-            paddingBottom: 6,
+            // paddingTop: 10,
+            // paddingBottom: 10,
           },
           tabBarShowLabel: true,
         }}
@@ -134,7 +141,7 @@ const BottomTabs = () => {
 
 const styles = StyleSheet.create({
   headerTitle: {
-    fontSize: 19,
+    fontSize: 20,
     fontWeight: "700",
   },
   headerIconContainer: {
@@ -142,7 +149,7 @@ const styles = StyleSheet.create({
     marginRight: 24,
   },
   headerIcon: {
-    marginLeft: 6,
+    marginLeft: 10,
   },
 });
 
