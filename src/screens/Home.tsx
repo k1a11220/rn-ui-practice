@@ -1,31 +1,39 @@
 import React from "react";
-import { FlatList, ScrollView, StyleSheet, Text, View } from "react-native";
+import {
+  FlatList,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import Banner from "../components/home/Banner";
 
 const DATA = [
   {
     id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-    title: "First Item",
+    title: "아이맥 27인치 2017 CTO 팝니다.",
   },
   {
     id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
-    title: "Second Item",
+    title: "에어하키게임 팔아요 거의 새거입니다",
   },
   {
     id: "58694a0f-3da1-471f-bd96-145571e29d72",
-    title: "Third Item",
+    title: "훈민정음 가운(그레이)",
   },
   {
     id: "bd7acb2ea-c1b1-46c2-aed5-3ad53abb28ba",
-    title: "First Item",
+    title: "갤럭시 워치1",
   },
   {
     id: "3ac68afc5-c605-48d3-a4f8-fbd91aa97f63",
-    title: "Second Item",
+    title: "냉장고 팝니다",
   },
   {
     id: "58694a013f-123453da1-471f-bd96-145571e29d72",
-    title: "Third Item",
+    title: "포켓몬 띠부띠부실 팔아요",
   },
   {
     id: "bd7acbe746a-c1b1-46c2-aed5-3ad53abb28ba",
@@ -42,8 +50,14 @@ const DATA = [
 ];
 
 const Item = ({ title }: any) => (
-  <View style={styles.item}>
-    <View style={styles.itemPic}></View>
+  <TouchableOpacity onPress={() => {}} style={styles.item}>
+    <Image
+      style={styles.itemPic}
+      source={{
+        uri: "http://ccimg.hellomarket.com/images/2019/item/12/25/20/0705_4283668_1.jpg?size=s6",
+      }}
+    />
+
     <View style={styles.itemDetailCont}>
       <Text style={styles.productName}>아이맥 27인치 2017 CTO 팝니다.</Text>
       <View style={styles.itemDetailWrapper}>
@@ -53,7 +67,7 @@ const Item = ({ title }: any) => (
       </View>
       <Text style={styles.itemPrice}>210만원</Text>
     </View>
-  </View>
+  </TouchableOpacity>
 );
 
 const HomeScreen = () => {
@@ -82,7 +96,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
     borderBottomWidth: 1,
     borderBottomColor: "#EFEFEF",
-    paddingBottom: 16,
+    paddingBottom: 22,
   },
 
   itemPic: {
