@@ -9,7 +9,10 @@ export default function App() {
     <SafeAreaProvider>
       <StatusBar barStyle={"dark-content"} />
       <BottomTabs />
-      <TouchableOpacity style={styles.touchableOpacityStyle}>
+      <TouchableOpacity
+        activeOpacity={0.2}
+        style={styles.touchableOpacityStyle}
+      >
         <PlusIconOutline size={20} fillColor={"#ffffff"} />
       </TouchableOpacity>
     </SafeAreaProvider>
@@ -27,6 +30,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     right: 16,
     bottom: 90,
+
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
