@@ -2,12 +2,12 @@ import React from "react";
 import {
   FlatList,
   Image,
-  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from "react-native";
+import PlusIconOutline from "../../assets/icons/Outline/PlusIconOutline";
 import Banner from "../components/home/Banner";
 
 const DATA = [
@@ -73,13 +73,21 @@ const Item = ({ title }: any) => (
 const HomeScreen = () => {
   const renderItem = ({ item }: any) => <Item title={item.title} />;
   return (
-    <FlatList
-      data={DATA}
-      renderItem={renderItem}
-      keyExtractor={(item) => item.id}
-      style={styles.container}
-      ListHeaderComponent={Banner}
-    ></FlatList>
+    <>
+      <FlatList
+        data={DATA}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id}
+        style={styles.container}
+        ListHeaderComponent={Banner}
+      ></FlatList>
+      <TouchableOpacity
+        activeOpacity={0.2}
+        style={styles.touchableOpacityStyle}
+      >
+        <PlusIconOutline size={20} fillColor={"#ffffff"} />
+      </TouchableOpacity>
+    </>
   );
 };
 
@@ -136,6 +144,27 @@ const styles = StyleSheet.create({
     color: "#212124",
     fontWeight: "600",
     marginTop: 8,
+  },
+  touchableOpacityStyle: {
+    position: "absolute",
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    backgroundColor: "#FE7E36",
+    alignItems: "center",
+    justifyContent: "center",
+    right: 16,
+    bottom: 20,
+
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 4.65,
+
+    elevation: 8,
   },
 });
 
