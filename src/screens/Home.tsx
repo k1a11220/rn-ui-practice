@@ -86,7 +86,6 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#ffffff",
-    alignSelf: "stretch",
   },
 
   item: {

@@ -92,6 +92,24 @@ const BottomTabs = () => {
                 <DongnaeIconOutline size={size} fillColor={color} />
               );
             },
+            headerLeft: () => (
+              <TouchableOpacity style={{ marginLeft: 24 }}>
+                <Text style={styles.headerTitle}>중앙동</Text>
+              </TouchableOpacity>
+            ),
+            headerRight: () => (
+              <View style={styles.headerIconContainer}>
+                <TouchableOpacity style={styles.headerIcon}>
+                  <SearchIconOutline size={"24"} fillColor={"#212124"} />
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.headerIcon}>
+                  <MenuIconOutline size={"24"} fillColor={"#212124"} />
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.headerIcon}>
+                  <BellIconOutline size={"24"} fillColor={"#212124"} />
+                </TouchableOpacity>
+              </View>
+            ),
           }}
           component={DongnaeScreen}
         />
